@@ -29,7 +29,7 @@ const Contact = () => {
             </a>
             <div className="flex justify-center gap-4 mt-6">
               <a
-                href="https://linkedin.com/in/yourprofile"
+                href="https://www.linkedin.com/in/kubilay-zengin-03962b242/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-primary/10 rounded-full hover:bg-primary/20 transition-colors"
@@ -37,7 +37,7 @@ const Contact = () => {
                 <Linkedin className="w-6 h-6" />
               </a>
               <a
-                href="https://github.com/yourprofile"
+                href="https://github.com/KubilayZengin"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-primary/10 rounded-full hover:bg-primary/20 transition-colors"
@@ -45,7 +45,7 @@ const Contact = () => {
                 <Github className="w-6 h-6" />
               </a>
               <a
-                href="/path-to-your-cv-en.pdf"
+                href="/Kubilay_Zengin_CV_EN.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-primary/10 rounded-full hover:bg-primary/20 transition-colors"
@@ -54,7 +54,7 @@ const Contact = () => {
                 <FileText className="w-6 h-6" />
               </a>
               <a
-                href="/path-to-your-cv-tr.pdf"
+                href="/Kubilay_Zengin_CV_TR.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-primary/10 rounded-full hover:bg-primary/20 transition-colors"

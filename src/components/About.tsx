@@ -19,7 +19,7 @@ const About = () => {
               Passionate about creating impactful solutions
             </h2>
             <p className="text-secondary mb-6">
-              Hello! I'm Kubilay Zengin, a Mechatronics Engineer with a B.Sc. from the İzmir University of Economics, 
+              Hello! I'm Kubi Rich, a Mechatronics Engineer with a B.Sc. from the İzmir University of Economics, 
               where I graduated as an honour student. Alongside my major, I completed a minor in Computer Science.
             </p>
             <p className="text-secondary">
