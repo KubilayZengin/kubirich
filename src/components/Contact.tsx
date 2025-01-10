@@ -3,7 +3,7 @@ import { Github, Linkedin, FileText } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 px-4 bg-muted">
+    <section id="contact" className="py-20 px-4 bg-muted dark:bg-accent">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -12,11 +12,11 @@ const Contact = () => {
           transition={{ duration: 0.5 }}
           className="text-center max-w-2xl mx-auto"
         >
-          <span className="inline-block px-3 py-1 mb-6 text-sm bg-primary/10 text-primary rounded-full">
+          <span className="inline-block px-3 py-1 mb-6 text-sm bg-primary/10 text-primary dark:text-white rounded-full">
             Contact
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Get In Touch</h2>
-          <p className="text-secondary mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 dark:text-white">Get In Touch</h2>
+          <p className="text-secondary dark:text-gray-300 mb-8">
             I'm currently looking for new opportunities. Whether you have a
             question or just want to say hi, I'll try my best to get back to you!
           </p>
@@ -32,7 +32,7 @@ const Contact = () => {
                 href="https://www.linkedin.com/in/kubilay-zengin-03962b242/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-primary/10 rounded-full hover:bg-primary/20 transition-colors"
+                className="p-3 bg-primary/10 rounded-full hover:bg-primary/20 transition-colors dark:text-white"
               >
                 <Linkedin className="w-6 h-6" />
               </a>
@@ -40,7 +40,7 @@ const Contact = () => {
                 href="https://github.com/KubilayZengin"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-primary/10 rounded-full hover:bg-primary/20 transition-colors"
+                className="p-3 bg-primary/10 rounded-full hover:bg-primary/20 transition-colors dark:text-white"
               >
                 <Github className="w-6 h-6" />
               </a>
@@ -48,7 +48,7 @@ const Contact = () => {
                 href="/Kubilay_Zengin_CV_EN.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-primary/10 rounded-full hover:bg-primary/20 transition-colors"
+                className="p-3 bg-primary/10 rounded-full hover:bg-primary/20 transition-colors dark:text-white"
                 title="CV (EN)"
               >
                 <FileText className="w-6 h-6" />
@@ -57,7 +57,7 @@ const Contact = () => {
                 href="/Kubilay_Zengin_CV_TR.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-primary/10 rounded-full hover:bg-primary/20 transition-colors"
+                className="p-3 bg-primary/10 rounded-full hover:bg-primary/20 transition-colors dark:text-white"
                 title="CV (TR)"
               >
                 <FileText className="w-6 h-6" />

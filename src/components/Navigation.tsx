@@ -53,14 +53,6 @@ const Navigation = () => {
               </a>
             </li>
             <li>
-              <a
-                href="#projects"
-                className="text-secondary hover:text-primary transition-colors"
-              >
-                {language === 'en' ? 'Projects' : 'Projeler'}
-              </a>
-            </li>
-            <li>
               <button
                 onClick={toggleLanguage}
                 className="p-2 text-secondary hover:text-primary transition-colors"
