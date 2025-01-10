@@ -35,7 +35,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-4">
+    <section className="min-h-screen flex items-center justify-center px-4 bg-white dark:bg-navy">
       <div className="text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -46,14 +46,14 @@ const Hero = () => {
           <img
             src="/lovable-uploads/e8057136-d166-45d7-913b-7a1b64a1ac5d.png"
             alt="Kubilay Zengin"
-            className="w-48 h-48 rounded-full mx-auto object-cover border-4 border-primary"
+            className="w-48 h-48 rounded-full mx-auto object-cover border-4 border-navy dark:border-white/20"
           />
         </motion.div>
         <motion.span 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-block px-3 py-1 mb-6 text-sm bg-primary/10 text-primary rounded-full"
+          className="inline-block px-3 py-1 mb-6 text-sm bg-navy/10 text-navy dark:text-white dark:bg-white/10 rounded-full"
         >
           {translations[language].welcome}
         </motion.span>
@@ -61,7 +61,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-4xl md:text-6xl font-bold mb-6"
+          className="text-4xl md:text-6xl font-bold mb-6 text-navy dark:text-white"
         >
           {translations[language].greeting}
           <br />
@@ -71,7 +71,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-secondary max-w-2xl mx-auto mb-8 text-lg"
+          className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8 text-lg"
         >
           {translations[language].description}
         </motion.p>
@@ -83,13 +83,13 @@ const Hero = () => {
         >
           <a 
             href="#contact" 
-            className="inline-block px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
+            className="inline-block px-6 py-3 bg-navy text-white dark:bg-white dark:text-navy rounded-lg hover:bg-navy/90 dark:hover:bg-gray-100 transition-colors"
           >
             {translations[language].contact}
           </a>
           <a 
             href="#about" 
-            className="inline-block px-6 py-3 bg-muted text-secondary rounded-lg hover:bg-muted/90 transition-colors"
+            className="inline-block px-6 py-3 bg-gray-100 text-navy dark:bg-white/10 dark:text-white rounded-lg hover:bg-gray-200 dark:hover:bg-white/20 transition-colors"
           >
             {translations[language].learnMore}
           </a>

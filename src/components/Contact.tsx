@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, FileText } from "lucide-react";
+import { Linkedin, Github, FileText } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const translations = {
@@ -32,7 +32,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <section id="contact" className="py-20 px-4 bg-muted dark:bg-accent">
+    <section id="contact" className="py-20 px-4 bg-navy dark:bg-navy-dark">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -41,19 +41,19 @@ const Contact = () => {
           transition={{ duration: 0.5 }}
           className="text-center max-w-2xl mx-auto"
         >
-          <span className="inline-block px-3 py-1 mb-6 text-sm bg-primary/10 text-primary dark:text-white rounded-full">
+          <span className="inline-block px-3 py-1 mb-6 text-sm bg-white/10 text-white rounded-full">
             {translations[language].contact}
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 dark:text-white">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             {translations[language].getInTouch}
           </h2>
-          <p className="text-secondary dark:text-gray-300 mb-8">
+          <p className="text-gray-300 mb-8">
             {translations[language].message}
           </p>
           <div className="space-y-4">
             <a
               href="mailto:kubilayzenginn@gmail.com"
-              className="inline-block w-full sm:w-auto px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
+              className="inline-block w-full sm:w-auto px-6 py-3 bg-white text-navy hover:bg-gray-100 transition-colors rounded-lg font-medium"
             >
               {translations[language].email}
             </a>
@@ -62,7 +62,7 @@ const Contact = () => {
                 href="https://www.linkedin.com/in/kubilay-zengin-03962b242/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-primary/10 rounded-full hover:bg-primary/20 transition-colors dark:text-white"
+                className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors text-white"
               >
                 <Linkedin className="w-6 h-6" strokeWidth={1.5} />
               </a>
@@ -70,7 +70,7 @@ const Contact = () => {
                 href="https://github.com/KubilayZengin"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-primary/10 rounded-full hover:bg-primary/20 transition-colors dark:text-white"
+                className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors text-white"
               >
                 <Github className="w-6 h-6" strokeWidth={1.5} />
               </a>
@@ -78,7 +78,7 @@ const Contact = () => {
                 href="/Kubilay_Zengin_CV_EN.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-primary/10 rounded-full hover:bg-primary/20 transition-colors dark:text-white"
+                className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors text-white"
                 title="CV (EN)"
               >
                 <FileText className="w-6 h-6" strokeWidth={1.5} />
@@ -87,7 +87,7 @@ const Contact = () => {
                 href="/Kubilay_Zengin_CV_TR.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-primary/10 rounded-full hover:bg-primary/20 transition-colors dark:text-white"
+                className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors text-white"
                 title="CV (TR)"
               >
                 <FileText className="w-6 h-6" strokeWidth={1.5} />

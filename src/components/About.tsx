@@ -43,7 +43,7 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" className="py-20 px-4 bg-muted dark:bg-accent">
+    <section id="about" className="py-20 px-4 bg-gray-50 dark:bg-navy-light">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -53,36 +53,36 @@ const About = () => {
           className="grid md:grid-cols-2 gap-12 items-center"
         >
           <div>
-            <span className="inline-block px-3 py-1 mb-6 text-sm bg-primary/10 text-primary dark:text-white rounded-full">
+            <span className="inline-block px-3 py-1 mb-6 text-sm bg-navy/10 text-navy dark:text-white rounded-full">
               {translations[language].aboutMe}
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 dark:text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-navy dark:text-white">
               {translations[language].title}
             </h2>
-            <p className="text-secondary dark:text-gray-300 mb-6">
+            <p className="text-gray-600 dark:text-gray-300 mb-6">
               {translations[language].description1}
             </p>
-            <p className="text-secondary dark:text-gray-300">
+            <p className="text-gray-600 dark:text-gray-300">
               {translations[language].description2}
             </p>
           </div>
           <div className="relative">
-            <div className="aspect-square rounded-2xl overflow-hidden bg-primary/5 dark:bg-primary/10 p-8">
+            <div className="aspect-square rounded-2xl overflow-hidden bg-white dark:bg-navy/20 p-8 shadow-lg">
               <div className="grid grid-cols-2 gap-4 h-full">
                 <div className="space-y-4">
-                  <div className="bg-primary/10 rounded-lg p-4">
-                    <h3 className="font-semibold dark:text-white">{translations[language].skills.aiOps}</h3>
+                  <div className="bg-navy/5 dark:bg-white/5 rounded-lg p-4 transition-colors">
+                    <h3 className="font-semibold text-navy dark:text-white">{translations[language].skills.aiOps}</h3>
                   </div>
-                  <div className="bg-primary/10 rounded-lg p-4">
-                    <h3 className="font-semibold dark:text-white">{translations[language].skills.automation}</h3>
+                  <div className="bg-navy/5 dark:bg-white/5 rounded-lg p-4 transition-colors">
+                    <h3 className="font-semibold text-navy dark:text-white">{translations[language].skills.automation}</h3>
                   </div>
                 </div>
                 <div className="space-y-4 mt-8">
-                  <div className="bg-primary/10 rounded-lg p-4">
-                    <h3 className="font-semibold dark:text-white">{translations[language].skills.robotics}</h3>
+                  <div className="bg-navy/5 dark:bg-white/5 rounded-lg p-4 transition-colors">
+                    <h3 className="font-semibold text-navy dark:text-white">{translations[language].skills.robotics}</h3>
                   </div>
-                  <div className="bg-primary/10 rounded-lg p-4">
-                    <h3 className="font-semibold dark:text-white">{translations[language].skills.softwareDev}</h3>
+                  <div className="bg-navy/5 dark:bg-white/5 rounded-lg p-4 transition-colors">
+                    <h3 className="font-semibold text-navy dark:text-white">{translations[language].skills.softwareDev}</h3>
                   </div>
                 </div>
               </div>

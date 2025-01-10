@@ -35,6 +35,11 @@ export default {
           DEFAULT: "#221F26",
           foreground: "#FFFFFF",
         },
+        navy: {
+          DEFAULT: "#1A1F2C",
+          light: "#2A3040",
+          dark: "#151B26",
+        },
       },
       keyframes: {
         "fade-up": {
