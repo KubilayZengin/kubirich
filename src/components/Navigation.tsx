@@ -3,6 +3,19 @@ import { motion } from "framer-motion";
 import { Globe, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 
+const translations = {
+  en: {
+    about: "About",
+    contact: "Contact",
+    name: "Kubi Rich"
+  },
+  tr: {
+    about: "Hakkımda",
+    contact: "İletişim",
+    name: "Kubi Rich"
+  }
+};
+
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [language, setLanguage] = useState<'en' | 'tr'>('en');
@@ -21,6 +34,8 @@ const Navigation = () => {
 
   const toggleLanguage = () => {
     setLanguage(prev => prev === 'en' ? 'tr' : 'en');
+    // Dispatch a custom event that other components can listen to
+    window.dispatchEvent(new CustomEvent('languageChange', { detail: { language: language === 'en' ? 'tr' : 'en' } }));
   };
 
   const toggleTheme = () => {
@@ -41,7 +56,7 @@ const Navigation = () => {
       <nav className="max-w-6xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <a href="#" className="text-xl font-bold text-primary">
-            Kubi Rich
+            {translations[language].name}
           </a>
           <ul className="hidden md:flex items-center space-x-8">
             <li>
@@ -49,7 +64,7 @@ const Navigation = () => {
                 href="#about"
                 className="text-secondary hover:text-primary transition-colors"
               >
-                {language === 'en' ? 'About' : 'Hakkımda'}
+                {translations[language].about}
               </a>
             </li>
             <li>
@@ -79,7 +94,7 @@ const Navigation = () => {
                 href="#contact"
                 className="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
               >
-                {language === 'en' ? 'Contact' : 'İletişim'}
+                {translations[language].contact}
               </a>
             </li>
           </ul>
