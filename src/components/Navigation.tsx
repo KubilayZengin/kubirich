@@ -1,12 +1,16 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Globe } from "lucide-react";
+import { Globe, Moon, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [language, setLanguage] = useState<'en' | 'tr'>('en');
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
@@ -18,6 +22,12 @@ const Navigation = () => {
   const toggleLanguage = () => {
     setLanguage(prev => prev === 'en' ? 'tr' : 'en');
   };
+
+  const toggleTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  };
+
+  if (!mounted) return null;
 
   return (
     <motion.header
@@ -57,6 +67,19 @@ const Navigation = () => {
                 aria-label="Toggle language"
               >
                 <Globe className="w-5 h-5" />
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={toggleTheme}
+                className="p-2 text-secondary hover:text-primary transition-colors"
+                aria-label="Toggle theme"
+              >
+                {theme === 'light' ? (
+                  <Moon className="w-5 h-5" />
+                ) : (
+                  <Sun className="w-5 h-5" />
+                )}
               </button>
             </li>
             <li>

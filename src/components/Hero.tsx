@@ -32,7 +32,7 @@ const Hero = () => {
         >
           Hi, I'm <span className="text-primary">Kubi Rich</span>
           <br />
-          Mechatronics Engineer
+          AI Operations Assistant
         </motion.h1>
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
@@ -40,8 +40,8 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="text-secondary max-w-2xl mx-auto mb-8 text-lg"
         >
-          B.Sc. in Mechatronics Engineering with a Minor in Computer Science from İzmir University of Economics. 
-          Passionate about robotics, automation, and software development.
+          AI Operations Assistant at AI Operator. B.Sc. in Mechatronics Engineering with a Minor in Computer Science from İzmir University of Economics. 
+          Passionate about AI, robotics, automation, and software development.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
