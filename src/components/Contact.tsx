@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Linkedin } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const translations = {
@@ -63,9 +62,13 @@ const Contact = () => {
                 href="https://www.linkedin.com/in/kubilay-zengin-03962b242/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors text-white"
+                className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors"
               >
-                <Linkedin className="w-6 h-6" strokeWidth={1.5} />
+                <img
+                  src="/lovable-uploads/05418915-d897-4d1a-ade6-c00d885181fa.png"
+                  alt="LinkedIn"
+                  className="w-6 h-6"
+                />
               </motion.a>
             </div>
           </div>

@@ -9,9 +9,13 @@ const translations = {
     description2: "I am passionate about artificial intelligence, robotics, automation, embedded systems, software development, and electrical systems. In my current role, I focus on optimizing AI operations and implementing automation solutions.",
     skills: {
       aiOps: "AI Operations",
+      aiOpsDesc: "Optimizing and managing AI systems",
       automation: "Automation",
+      automationDesc: "Implementing automated solutions",
       robotics: "Robotics",
-      softwareDev: "Software Dev"
+      roboticsDesc: "Working with robotic systems",
+      softwareDev: "Software Dev",
+      softwareDevDesc: "Creating efficient software solutions"
     }
   },
   tr: {
@@ -21,9 +25,13 @@ const translations = {
     description2: "Yapay zeka, robotik, otomasyon, gömülü sistemler, yazılım geliştirme ve elektrik sistemleri konularında tutkulu biriyim. Mevcut rolümde, AI operasyonlarını optimize etmeye ve otomasyon çözümleri uygulamaya odaklanıyorum.",
     skills: {
       aiOps: "AI Operasyonları",
+      aiOpsDesc: "AI sistemlerini optimize etme ve yönetme",
       automation: "Otomasyon",
+      automationDesc: "Otomatik çözümler uygulama",
       robotics: "Robotik",
-      softwareDev: "Yazılım Geliştirme"
+      roboticsDesc: "Robotik sistemlerle çalışma",
+      softwareDev: "Yazılım Geliştirme",
+      softwareDevDesc: "Verimli yazılım çözümleri oluşturma"
     }
   }
 };
@@ -50,73 +58,87 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="grid md:grid-cols-2 gap-12 items-center"
+          className="text-center mb-12"
         >
-          <div>
-            <span className="inline-block px-3 py-1 mb-6 text-sm bg-white/10 text-white rounded-full">
-              {translations[language].aboutMe}
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-              {translations[language].title}
-            </h2>
-            <p className="text-gray-300 mb-6">
-              {translations[language].description1}
-            </p>
-            <p className="text-gray-300">
-              {translations[language].description2}
-            </p>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="space-y-4"
-            >
-              <div className="bg-white/5 rounded-lg p-4 backdrop-blur-sm">
-                <img
-                  src="/ai-operations.jpg"
-                  alt="AI Operations"
-                  className="w-full h-32 object-cover rounded-lg mb-3"
-                />
-                <h3 className="font-semibold text-white">{translations[language].skills.aiOps}</h3>
-              </div>
-              <div className="bg-white/5 rounded-lg p-4 backdrop-blur-sm">
-                <img
-                  src="/automation.jpg"
-                  alt="Automation"
-                  className="w-full h-32 object-cover rounded-lg mb-3"
-                />
-                <h3 className="font-semibold text-white">{translations[language].skills.automation}</h3>
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="space-y-4 mt-8"
-            >
-              <div className="bg-white/5 rounded-lg p-4 backdrop-blur-sm">
-                <img
-                  src="/robotics.jpg"
-                  alt="Robotics"
-                  className="w-full h-32 object-cover rounded-lg mb-3"
-                />
-                <h3 className="font-semibold text-white">{translations[language].skills.robotics}</h3>
-              </div>
-              <div className="bg-white/5 rounded-lg p-4 backdrop-blur-sm">
-                <img
-                  src="/software-dev.jpg"
-                  alt="Software Development"
-                  className="w-full h-32 object-cover rounded-lg mb-3"
-                />
-                <h3 className="font-semibold text-white">{translations[language].skills.softwareDev}</h3>
-              </div>
-            </motion.div>
-          </div>
+          <span className="inline-block px-3 py-1 mb-6 text-sm bg-white/10 text-white rounded-full">
+            {translations[language].aboutMe}
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+            {translations[language].title}
+          </h2>
+          <p className="text-gray-300 mb-6 max-w-3xl mx-auto">
+            {translations[language].description1}
+          </p>
+          <p className="text-gray-300 max-w-3xl mx-auto">
+            {translations[language].description2}
+          </p>
         </motion.div>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="bg-white/5 rounded-lg p-4 backdrop-blur-sm"
+          >
+            <img
+              src="/ai-operations.jpg"
+              alt="AI Operations"
+              className="w-full h-32 object-cover rounded-lg mb-3"
+            />
+            <h3 className="font-semibold text-white mb-2">{translations[language].skills.aiOps}</h3>
+            <p className="text-sm text-gray-300">{translations[language].skills.aiOpsDesc}</p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="bg-white/5 rounded-lg p-4 backdrop-blur-sm"
+          >
+            <img
+              src="/automation.jpg"
+              alt="Automation"
+              className="w-full h-32 object-cover rounded-lg mb-3"
+            />
+            <h3 className="font-semibold text-white mb-2">{translations[language].skills.automation}</h3>
+            <p className="text-sm text-gray-300">{translations[language].skills.automationDesc}</p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="bg-white/5 rounded-lg p-4 backdrop-blur-sm"
+          >
+            <img
+              src="/robotics.jpg"
+              alt="Robotics"
+              className="w-full h-32 object-cover rounded-lg mb-3"
+            />
+            <h3 className="font-semibold text-white mb-2">{translations[language].skills.robotics}</h3>
+            <p className="text-sm text-gray-300">{translations[language].skills.roboticsDesc}</p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="bg-white/5 rounded-lg p-4 backdrop-blur-sm"
+          >
+            <img
+              src="/software-dev.jpg"
+              alt="Software Development"
+              className="w-full h-32 object-cover rounded-lg mb-3"
+            />
+            <h3 className="font-semibold text-white mb-2">{translations[language].skills.softwareDev}</h3>
+            <p className="text-sm text-gray-300">{translations[language].skills.softwareDevDesc}</p>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
