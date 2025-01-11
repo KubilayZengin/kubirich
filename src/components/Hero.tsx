@@ -5,7 +5,7 @@ const translations = {
   en: {
     welcome: "Welcome to my portfolio",
     greeting: "Hi, I'm Kubi Rich",
-    description: "AI Operations Assistant at AI Operator. B.Sc. in Mechatronics Engineering with a Minor in Computer Science from İzmir University of Economics. Passionate about AI, robotics, automation, and software development.",
+    description: "B.Sc. in Mechatronics Engineering with a Minor in Computer Science from İzmir University of Economics. Passionate about AI, robotics, automation, and software development.",
     contact: "Get in touch",
     learnMore: "Learn more"
   },
@@ -44,7 +44,7 @@ const Hero = () => {
           <img
             src="/lovable-uploads/e8057136-d166-45d7-913b-7a1b64a1ac5d.png"
             alt="Kubilay Zengin"
-            className="w-48 h-48 rounded-full mx-auto object-cover border-4 border-white/20"
+            className="w-48 h-48 rounded-full mx-auto -ml-2 object-cover border-4 border-white/20"
           />
         </motion.div>
         <motion.span 

@@ -55,7 +55,7 @@ const Navigation = () => {
     >
       <nav className="max-w-6xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <a href="#" className="text-xl font-bold text-primary">
+          <a href="#" className="text-xl font-bold text-primary dark:text-white">
             {translations[language].name}
           </a>
           <ul className="hidden md:flex items-center space-x-8">

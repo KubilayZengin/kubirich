@@ -6,14 +6,14 @@ const translations = {
   en: {
     contact: "Contact",
     getInTouch: "Get In Touch",
-    message: "Whether you have a question or just want to say hi, I'll try my best to get back to you!",
-    email: "kubilayzenginn@gmail.com"
+    message: "If you want to connect, feel free!",
+    email: "kubirich@aioperator.com"
   },
   tr: {
     contact: "İletişim",
     getInTouch: "İletişime Geç",
     message: "Bir sorunuz olsun veya sadece merhaba demek isteyin, size en kısa sürede dönmeye çalışacağım!",
-    email: "kubilayzenginn@gmail.com"
+    email: "kubirich@aioperator.com"
   }
 };
 
