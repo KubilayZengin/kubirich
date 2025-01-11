@@ -3,14 +3,14 @@ import { useState, useEffect } from "react";
 
 const translations = {
   en: {
-    welcome: "Welcome to my portfolio",
+    welcome: "Welcome to my website!",
     greeting: "Hi, I'm Kubi Rich",
     description: "B.Sc. in Mechatronics Engineering with a Minor in Computer Science from İzmir University of Economics. Passionate about AI, robotics, automation, and software development.",
     contact: "Get in touch",
     learnMore: "Learn more"
   },
   tr: {
-    welcome: "Portfolyoma hoş geldiniz",
+    welcome: "Web siteme hoş geldiniz!",
     greeting: "Merhaba, ben Kubi Rich",
     description: "AI Operator'da AI Operasyon Asistanı. İzmir Ekonomi Üniversitesi'nden Mekatronik Mühendisliği B.Sc. ve Bilgisayar Bilimi yan dal mezunu. Yapay zeka, robotik, otomasyon ve yazılım geliştirme konularında tutkulu.",
     contact: "İletişime geç",
@@ -41,11 +41,13 @@ const Hero = () => {
           transition={{ duration: 0.5 }}
           className="mb-8"
         >
-          <img
-            src="/lovable-uploads/e8057136-d166-45d7-913b-7a1b64a1ac5d.png"
-            alt="Kubilay Zengin"
-            className="w-48 h-48 rounded-full mx-auto -ml-2 object-cover border-4 border-white/20"
-          />
+          <div className="w-48 h-48 mx-auto rounded-full border-4 border-white/20 overflow-hidden">
+            <img
+              src="/lovable-uploads/e8057136-d166-45d7-913b-7a1b64a1ac5d.png"
+              alt="Kubilay Zengin"
+              className="w-full h-full object-cover object-[-4px_center]"
+            />
+          </div>
         </motion.div>
         <motion.span 
           initial={{ opacity: 0, y: 20 }}

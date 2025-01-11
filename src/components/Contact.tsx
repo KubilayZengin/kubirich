@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Linkedin, Github, FileText } from "lucide-react";
+import { Linkedin } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const translations = {
@@ -52,7 +52,7 @@ const Contact = () => {
           </p>
           <div className="space-y-4">
             <a
-              href="mailto:kubilayzenginn@gmail.com"
+              href="mailto:kubirich@aioperator.com"
               className="inline-block w-full sm:w-auto px-6 py-3 bg-white text-navy hover:bg-gray-100 transition-colors rounded-lg font-medium"
             >
               {translations[language].email}
@@ -66,35 +66,6 @@ const Contact = () => {
                 className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors text-white"
               >
                 <Linkedin className="w-6 h-6" strokeWidth={1.5} />
-              </motion.a>
-              <motion.a
-                whileHover={{ scale: 1.1 }}
-                href="https://github.com/KubilayZengin"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors text-white"
-              >
-                <Github className="w-6 h-6" strokeWidth={1.5} />
-              </motion.a>
-              <motion.a
-                whileHover={{ scale: 1.1 }}
-                href="/Kubilay_Zengin_CV_EN.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors text-white"
-                title="CV (EN)"
-              >
-                <FileText className="w-6 h-6" strokeWidth={1.5} />
-              </motion.a>
-              <motion.a
-                whileHover={{ scale: 1.1 }}
-                href="/Kubilay_Zengin_CV_TR.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors text-white"
-                title="CV (TR)"
-              >
-                <FileText className="w-6 h-6" strokeWidth={1.5} />
               </motion.a>
             </div>
           </div>
