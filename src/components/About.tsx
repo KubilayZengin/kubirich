@@ -51,7 +51,7 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" className="py-20 px-4 bg-navy-light dark:bg-navy">
+    <section id="about" className="py-20 px-4 bg-white dark:bg-navy">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -60,16 +60,16 @@ const About = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <span className="inline-block px-3 py-1 mb-6 text-sm bg-white/10 text-white rounded-full">
+          <span className="inline-block px-3 py-1 mb-6 text-sm bg-gray-100 dark:bg-white/10 text-gray-800 dark:text-white rounded-full">
             {translations[language].aboutMe}
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
             {translations[language].title}
           </h2>
-          <p className="text-gray-300 mb-6 max-w-3xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-3xl mx-auto">
             {translations[language].description1}
           </p>
-          <p className="text-gray-300 max-w-3xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             {translations[language].description2}
           </p>
         </motion.div>
@@ -80,15 +80,15 @@ const About = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-white/5 rounded-lg p-4 backdrop-blur-sm"
+            className="bg-gray-50 dark:bg-white/5 rounded-lg p-4 backdrop-blur-sm"
           >
             <img
-              src="/ai-operations.jpg"
+              src="/lovable-uploads/40bafbbe-617f-46d8-8f3f-5e1154de3c27.png"
               alt="AI Operations"
               className="w-full h-32 object-cover rounded-lg mb-3"
             />
-            <h3 className="font-semibold text-white mb-2">{translations[language].skills.aiOps}</h3>
-            <p className="text-sm text-gray-300">{translations[language].skills.aiOpsDesc}</p>
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{translations[language].skills.aiOps}</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-300">{translations[language].skills.aiOpsDesc}</p>
           </motion.div>
 
           <motion.div
@@ -96,15 +96,15 @@ const About = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="bg-white/5 rounded-lg p-4 backdrop-blur-sm"
+            className="bg-gray-50 dark:bg-white/5 rounded-lg p-4 backdrop-blur-sm"
           >
             <img
               src="/automation.jpg"
               alt="Automation"
               className="w-full h-32 object-cover rounded-lg mb-3"
             />
-            <h3 className="font-semibold text-white mb-2">{translations[language].skills.automation}</h3>
-            <p className="text-sm text-gray-300">{translations[language].skills.automationDesc}</p>
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{translations[language].skills.automation}</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-300">{translations[language].skills.automationDesc}</p>
           </motion.div>
 
           <motion.div
@@ -112,15 +112,15 @@ const About = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="bg-white/5 rounded-lg p-4 backdrop-blur-sm"
+            className="bg-gray-50 dark:bg-white/5 rounded-lg p-4 backdrop-blur-sm"
           >
             <img
               src="/robotics.jpg"
               alt="Robotics"
               className="w-full h-32 object-cover rounded-lg mb-3"
             />
-            <h3 className="font-semibold text-white mb-2">{translations[language].skills.robotics}</h3>
-            <p className="text-sm text-gray-300">{translations[language].skills.roboticsDesc}</p>
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{translations[language].skills.robotics}</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-300">{translations[language].skills.roboticsDesc}</p>
           </motion.div>
 
           <motion.div
@@ -128,15 +128,15 @@ const About = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="bg-white/5 rounded-lg p-4 backdrop-blur-sm"
+            className="bg-gray-50 dark:bg-white/5 rounded-lg p-4 backdrop-blur-sm"
           >
             <img
               src="/software-dev.jpg"
               alt="Software Development"
               className="w-full h-32 object-cover rounded-lg mb-3"
             />
-            <h3 className="font-semibold text-white mb-2">{translations[language].skills.softwareDev}</h3>
-            <p className="text-sm text-gray-300">{translations[language].skills.softwareDevDesc}</p>
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{translations[language].skills.softwareDev}</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-300">{translations[language].skills.softwareDevDesc}</p>
           </motion.div>
         </div>
       </div>
