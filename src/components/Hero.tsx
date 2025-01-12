@@ -43,9 +43,9 @@ const Hero = () => {
         >
           <div className="w-48 h-48 mx-auto rounded-full border-4 border-gray-200 dark:border-white/20 overflow-hidden">
             <img
-              src="/lovable-uploads/e8057136-d166-45d7-913b-7a1b64a1ac5d.png"
+              src="/lovable-uploads/9a41a5f0-6b61-4db6-bd91-086ca7d04e37.png"
               alt="Profile"
-              className="w-full h-full object-cover object-[-4px_center]"
+              className="w-full h-full object-cover"
             />
           </div>
         </motion.div>

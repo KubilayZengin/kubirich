@@ -6,13 +6,13 @@ const translations = {
     contact: "Contact",
     getInTouch: "Get In Touch",
     message: "If you want to connect, feel free!",
-    email: "kubirich@aioperator.com"
+    email: "kubi@aioperator.com"
   },
   tr: {
     contact: "İletişim",
     getInTouch: "İletişime Geç",
     message: "Bir sorunuz olsun veya sadece merhaba demek isteyin, size en kısa sürede dönmeye çalışacağım!",
-    email: "kubirich@aioperator.com"
+    email: "kubi@aioperator.com"
   }
 };
 
@@ -51,7 +51,7 @@ const Contact = () => {
           </p>
           <div className="space-y-4">
             <a
-              href="mailto:kubirich@aioperator.com"
+              href="mailto:kubi@aioperator.com"
               className="inline-block w-full sm:w-auto px-6 py-3 bg-gray-800 dark:bg-white text-white dark:text-navy hover:bg-gray-700 dark:hover:bg-gray-100 transition-colors rounded-lg font-medium"
             >
               {translations[language].email}
@@ -62,12 +62,12 @@ const Contact = () => {
                 href="https://www.linkedin.com/in/kubilay-zengin-03962b242/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-4 w-16 h-16 bg-gray-100 dark:bg-white/10 rounded-lg hover:bg-gray-200 dark:hover:bg-white/20 transition-colors flex items-center justify-center"
+                className="w-16 h-16 bg-transparent dark:bg-transparent rounded-lg hover:bg-gray-100 dark:hover:bg-white/20 transition-colors flex items-center justify-center"
               >
                 <img
                   src="/lovable-uploads/05418915-d897-4d1a-ade6-c00d885181fa.png"
                   alt="LinkedIn"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </motion.a>
             </div>
