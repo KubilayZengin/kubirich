@@ -91,7 +91,7 @@ const Navigation = () => {
             <li>
               <a
                 href="#contact"
-                className="px-4 py-2 bg-primary text-black dark:text-black rounded-lg hover:bg-primary/90 transition-colors"
+                className="px-4 py-2 bg-primary text-white dark:text-black rounded-lg hover:bg-primary/90 transition-colors"
               >
                 {translations[language].contact}
               </a>

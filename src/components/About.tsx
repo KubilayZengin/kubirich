@@ -111,7 +111,7 @@ const About = () => {
             className="bg-gray-50 dark:bg-white/5 rounded-lg p-4 backdrop-blur-sm"
           >
             <img
-              src="/software-dev.jpg"
+              src="/lovable-uploads/ec174f74-7633-4470-9d89-827a9666240d.png"
               alt="Software Development"
               className="w-full h-32 object-cover rounded-lg mb-3"
             />

@@ -62,12 +62,12 @@ const Contact = () => {
                 href="https://www.linkedin.com/in/kubilay-zengin-03962b242/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-16 h-16 bg-gray-100 dark:bg-transparent rounded-lg hover:bg-gray-200 dark:hover:bg-white/20 transition-colors flex items-center justify-center"
+                className="w-20 h-20 bg-black dark:bg-transparent rounded-lg hover:bg-gray-900 dark:hover:bg-white/20 transition-colors flex items-center justify-center"
               >
                 <img
-                  src="/lovable-uploads/05418915-d897-4d1a-ade6-c00d885181fa.png"
+                  src={`${theme === 'light' ? '/lovable-uploads/32648997-fc8d-4387-b1d4-dff98a6b8bed.png' : '/lovable-uploads/05418915-d897-4d1a-ade6-c00d885181fa.png'}`}
                   alt="LinkedIn"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full p-1 object-contain"
                 />
               </motion.a>
             </div>
