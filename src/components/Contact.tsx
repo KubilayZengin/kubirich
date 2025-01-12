@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
 
 const translations = {
   en: {
@@ -18,6 +19,7 @@ const translations = {
 
 const Contact = () => {
   const [language, setLanguage] = useState<'en' | 'tr'>('en');
+  const { theme } = useTheme();
 
   useEffect(() => {
     const handleLanguageChange = (event: CustomEvent) => {
