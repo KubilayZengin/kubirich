@@ -31,7 +31,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <section id="contact" className="py-20 px-4 bg-navy dark:bg-navy-dark">
+    <section id="contact" className="py-20 px-4 bg-white dark:bg-navy-dark">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -40,19 +40,19 @@ const Contact = () => {
           transition={{ duration: 0.5 }}
           className="text-center max-w-2xl mx-auto"
         >
-          <span className="inline-block px-3 py-1 mb-6 text-sm bg-white/10 text-white rounded-full">
+          <span className="inline-block px-3 py-1 mb-6 text-sm bg-gray-100 dark:bg-white/10 text-gray-800 dark:text-white rounded-full">
             {translations[language].contact}
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
             {translations[language].getInTouch}
           </h2>
-          <p className="text-gray-300 mb-8">
+          <p className="text-gray-600 dark:text-gray-300 mb-8">
             {translations[language].message}
           </p>
           <div className="space-y-4">
             <a
               href="mailto:kubirich@aioperator.com"
-              className="inline-block w-full sm:w-auto px-6 py-3 bg-white text-navy hover:bg-gray-100 transition-colors rounded-lg font-medium"
+              className="inline-block w-full sm:w-auto px-6 py-3 bg-gray-800 dark:bg-white text-white dark:text-navy hover:bg-gray-700 dark:hover:bg-gray-100 transition-colors rounded-lg font-medium"
             >
               {translations[language].email}
             </a>
@@ -62,12 +62,12 @@ const Contact = () => {
                 href="https://www.linkedin.com/in/kubilay-zengin-03962b242/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-colors"
+                className="p-4 w-16 h-16 bg-gray-100 dark:bg-white/10 rounded-lg hover:bg-gray-200 dark:hover:bg-white/20 transition-colors flex items-center justify-center"
               >
                 <img
                   src="/lovable-uploads/05418915-d897-4d1a-ade6-c00d885181fa.png"
                   alt="LinkedIn"
-                  className="w-6 h-6"
+                  className="w-full h-full object-cover"
                 />
               </motion.a>
             </div>

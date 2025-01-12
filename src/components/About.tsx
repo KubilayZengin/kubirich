@@ -99,7 +99,7 @@ const About = () => {
             className="bg-gray-50 dark:bg-white/5 rounded-lg p-4 backdrop-blur-sm"
           >
             <img
-              src="/automation.jpg"
+              src="/lovable-uploads/315b1175-f5c0-49c6-8f26-1b418a50e885.png"
               alt="Automation"
               className="w-full h-32 object-cover rounded-lg mb-3"
             />
