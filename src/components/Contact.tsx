@@ -62,7 +62,7 @@ const Contact = () => {
                 href="https://www.linkedin.com/in/kubilay-zengin-03962b242/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-16 h-16 bg-transparent dark:bg-transparent rounded-lg hover:bg-gray-100 dark:hover:bg-white/20 transition-colors flex items-center justify-center"
+                className="w-16 h-16 bg-gray-100 dark:bg-transparent rounded-lg hover:bg-gray-200 dark:hover:bg-white/20 transition-colors flex items-center justify-center"
               >
                 <img
                   src="/lovable-uploads/05418915-d897-4d1a-ade6-c00d885181fa.png"

@@ -34,7 +34,6 @@ const Navigation = () => {
 
   const toggleLanguage = () => {
     setLanguage(prev => prev === 'en' ? 'tr' : 'en');
-    // Dispatch a custom event that other components can listen to
     window.dispatchEvent(new CustomEvent('languageChange', { detail: { language: language === 'en' ? 'tr' : 'en' } }));
   };
 
@@ -62,7 +61,7 @@ const Navigation = () => {
             <li>
               <a
                 href="#about"
-                className="text-secondary hover:text-primary transition-colors"
+                className="text-black dark:text-white hover:text-primary transition-colors"
               >
                 {translations[language].about}
               </a>
@@ -70,7 +69,7 @@ const Navigation = () => {
             <li>
               <button
                 onClick={toggleLanguage}
-                className="p-2 text-secondary hover:text-primary transition-colors"
+                className="p-2 text-black dark:text-white hover:text-primary transition-colors"
                 aria-label="Toggle language"
               >
                 <Globe className="w-5 h-5" />
@@ -79,7 +78,7 @@ const Navigation = () => {
             <li>
               <button
                 onClick={toggleTheme}
-                className="p-2 text-secondary hover:text-primary transition-colors"
+                className="p-2 text-black dark:text-white hover:text-primary transition-colors"
                 aria-label="Toggle theme"
               >
                 {theme === 'light' ? (

@@ -12,8 +12,6 @@ const translations = {
       aiOpsDesc: "Optimizing and managing AI systems",
       automation: "Automation",
       automationDesc: "Implementing automated solutions",
-      robotics: "Robotics",
-      roboticsDesc: "Working with robotic systems",
       softwareDev: "Software Dev",
       softwareDevDesc: "Creating efficient software solutions"
     }
@@ -28,8 +26,6 @@ const translations = {
       aiOpsDesc: "AI sistemlerini optimize etme ve yönetme",
       automation: "Otomasyon",
       automationDesc: "Otomatik çözümler uygulama",
-      robotics: "Robotik",
-      roboticsDesc: "Robotik sistemlerle çalışma",
       softwareDev: "Yazılım Geliştirme",
       softwareDevDesc: "Verimli yazılım çözümleri oluşturma"
     }
@@ -74,7 +70,7 @@ const About = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -112,22 +108,6 @@ const About = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="bg-gray-50 dark:bg-white/5 rounded-lg p-4 backdrop-blur-sm"
-          >
-            <img
-              src="/robotics.jpg"
-              alt="Robotics"
-              className="w-full h-32 object-cover rounded-lg mb-3"
-            />
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{translations[language].skills.robotics}</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-300">{translations[language].skills.roboticsDesc}</p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
             className="bg-gray-50 dark:bg-white/5 rounded-lg p-4 backdrop-blur-sm"
           >
             <img
