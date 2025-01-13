@@ -3,18 +3,18 @@ import { useState, useEffect } from "react";
 
 const translations = {
   en: {
-    greeting: "Hi, I'm",
-    name: "Kubi Rich",
-    title: "Software Dev",
-    description: "I'm a software developer specializing in building AI-powered applications and automation solutions.",
-    contact: "Contact Me"
+    welcome: "Welcome to my website!",
+    greeting: "Hi, I'm Kubi Rich",
+    description: "B.Sc. in Mechatronics Engineering with a Minor in Computer Science from İzmir University of Economics. Passionate about AI, robotics, automation, and software development.",
+    contact: "Get in touch",
+    learnMore: "Learn more"
   },
   tr: {
-    greeting: "Merhaba, Ben",
-    name: "Kubi Rich",
-    title: "Yazılım Geliştirici",
-    description: "Yapay zeka destekli uygulamalar ve otomasyon çözümleri geliştirme konusunda uzmanlaşmış bir yazılım geliştiricisiyim.",
-    contact: "İletişime Geç"
+    welcome: "Web siteme hoş geldiniz!",
+    greeting: "Merhaba, ben Kubi Rich",
+    description: "AI Operator'da AI Operasyon Asistanı. İzmir Ekonomi Üniversitesi'nden Mekatronik Mühendisliği B.Sc. ve Bilgisayar Bilimi yan dal mezunu. Yapay zeka, robotik, otomasyon ve yazılım geliştirme konularında tutkulu.",
+    contact: "İletişime geç",
+    learnMore: "Daha fazla"
   }
 };
 
@@ -33,40 +33,64 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-b from-white to-gray-100 dark:from-navy dark:to-navy-dark py-20 px-4">
-      <div className="max-w-6xl mx-auto text-center">
+    <section className="min-h-screen flex items-center justify-center px-4 bg-white dark:bg-navy-dark">
+      <div className="text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="space-y-6"
+          className="mb-8"
         >
-          <h2 className="text-xl md:text-2xl text-gray-600 dark:text-gray-400">
-            {translations[language].greeting}
-          </h2>
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white">
-            {translations[language].name}
-          </h1>
-          <p className="text-2xl md:text-3xl text-primary dark:text-gray-300 text-center w-full">
-            {translations[language].title}
-          </p>
-          <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-400 text-lg">
-            {translations[language].description}
-          </p>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
+          <div className="w-48 h-48 mx-auto rounded-full border-4 border-gray-200 dark:border-white/20 overflow-hidden">
+            <img
+              src="/lovable-uploads/9a41a5f0-6b61-4db6-bd91-086ca7d04e37.png"
+              alt="Profile"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </motion.div>
+        <motion.span 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="inline-block px-3 py-1 mb-6 text-sm bg-gray-100 dark:bg-white/10 text-gray-800 dark:text-white rounded-full"
+        >
+          {translations[language].welcome}
+        </motion.span>
+        <motion.h1 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="text-4xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white"
+        >
+          {translations[language].greeting}
+        </motion.h1>
+        <motion.p 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8 text-lg"
+        >
+          {translations[language].description}
+        </motion.p>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          className="space-x-4"
+        >
+          <a 
+            href="#contact" 
+            className="inline-block px-6 py-3 bg-gray-800 dark:bg-white text-white dark:text-navy hover:bg-gray-700 dark:hover:bg-gray-100 transition-colors rounded-lg font-medium"
           >
-            <a
-              href="https://www.linkedin.com/in/kubi-rich-03962b242"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-8 py-3 bg-primary text-white dark:text-black rounded-lg hover:bg-primary/90 transition-colors"
-            >
-              {translations[language].contact}
-            </a>
-          </motion.div>
+            {translations[language].contact}
+          </a>
+          <a 
+            href="#about" 
+            className="inline-block px-6 py-3 bg-gray-100 dark:bg-white/10 text-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-white/20 transition-colors rounded-lg font-medium"
+          >
+            {translations[language].learnMore}
+          </a>
         </motion.div>
       </div>
     </section>

@@ -20,10 +20,8 @@ const translations = {
 const Contact = () => {
   const [language, setLanguage] = useState<'en' | 'tr'>('en');
   const { theme } = useTheme();
-  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
     const handleLanguageChange = (event: CustomEvent) => {
       setLanguage(event.detail.language);
     };
@@ -33,8 +31,6 @@ const Contact = () => {
       window.removeEventListener('languageChange', handleLanguageChange as EventListener);
     };
   }, []);
-
-  if (!mounted) return null;
 
   return (
     <section id="contact" className="py-20 px-4 bg-gray-100 dark:bg-navy-dark">
@@ -65,7 +61,7 @@ const Contact = () => {
             <div className="flex justify-center gap-4 mt-6">
               <motion.a
                 whileHover={{ scale: 1.1 }}
-                href="https://www.linkedin.com/in/kubi-rich-03962b242"
+                href="https://www.linkedin.com/in/kubilay-zengin-03962b242/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 bg-transparent transition-colors flex items-center justify-center"
