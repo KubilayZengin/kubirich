@@ -5,8 +5,9 @@ const translations = {
   en: {
     aboutMe: "About Me",
     title: "AI Operations Assistant at AI Operator",
-    description1: "Hello! I'm Kubi Rich, currently working as an AI Operations Assistant at AI Operator. I hold a B.Sc. in Mechatronics Engineering from the İzmir University of Economics, where I graduated as an honour student. Alongside my major, I completed a minor in Computer Science.",
-    description2: "I am passionate about artificial intelligence, robotics, automation, embedded systems, software development, and electrical systems. In my current role, I focus on optimizing AI operations and implementing automation solutions.",
+    description1: "Hello! I'm Kubi Rich, an AI Operations Assistant at AI Operator, where we make AI accessible and practical for small and medium-sized businesses. My academic foundation includes a B.Sc. in Mechatronics Engineering from Izmir University of Economics, where I graduated with honors, along with a minor in Computer Science.",
+    description2: "At AI Operator, I'm driven by a passion for using technology to solve real-world problems. My role involves optimizing AI-driven processes, designing automation solutions, and helping businesses embrace AI in a way that feels simple and impactful. From streamlining workflows to developing tailored strategies, I love contributing to innovative projects that empower teams to focus on what truly matters.",
+    description3: "I'm particularly enthusiastic about exploring how artificial intelligence, robotics, and automation can transform operations. If you're curious about how AI can elevate your business, feel free to connect or book a meeting through our website—I'd be happy to help!",
     skills: {
       aiOps: "AI Operations",
       aiOpsDesc: "Optimizing and managing AI systems",
@@ -21,6 +22,7 @@ const translations = {
     title: "AI Operator'da AI Operasyon Asistanı",
     description1: "Merhaba! Ben Kubi Rich, şu anda AI Operator'da AI Operasyon Asistanı olarak çalışıyorum. İzmir Ekonomi Üniversitesi'nden Mekatronik Mühendisliği B.Sc. derecemi onur öğrencisi olarak aldım. Ana dalımın yanı sıra, Bilgisayar Bilimi yan dalını tamamladım.",
     description2: "Yapay zeka, robotik, otomasyon, gömülü sistemler, yazılım geliştirme ve elektrik sistemleri konularında tutkulu biriyim. Mevcut rolümde, AI operasyonlarını optimize etmeye ve otomasyon çözümleri uygulamaya odaklanıyorum.",
+    description3: "",
     skills: {
       aiOps: "AI Operasyonları",
       aiOpsDesc: "AI sistemlerini optimize etme ve yönetme",
@@ -65,9 +67,14 @@ const About = () => {
           <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-3xl mx-auto">
             {translations[language].description1}
           </p>
-          <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-3xl mx-auto">
             {translations[language].description2}
           </p>
+          {translations[language].description3 && (
+            <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              {translations[language].description3}
+            </p>
+          )}
         </motion.div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
