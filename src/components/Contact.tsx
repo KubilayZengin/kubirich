@@ -61,7 +61,7 @@ const Contact = () => {
             <div className="flex justify-center gap-4 mt-6">
               <motion.a
                 whileHover={{ scale: 1.1 }}
-                href="https://www.linkedin.com/in/kubilay-zengin-03962b242/"
+                href="https://www.linkedin.com/in/kubi-rich-03962b242"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 bg-transparent transition-colors flex items-center justify-center"
