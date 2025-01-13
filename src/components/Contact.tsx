@@ -33,7 +33,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <section id="contact" className="py-20 px-4 bg-gray-50 dark:bg-navy-dark">
+    <section id="contact" className="py-20 px-4 bg-gray-100 dark:bg-navy-dark">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -42,19 +42,19 @@ const Contact = () => {
           transition={{ duration: 0.5 }}
           className="text-center max-w-2xl mx-auto"
         >
-          <span className="inline-block px-3 py-1 mb-6 text-sm bg-gray-200 dark:bg-white/10 text-gray-800 dark:text-white rounded-full">
+          <span className="inline-block px-3 py-1 mb-6 text-sm bg-gray-300 dark:bg-white/10 text-gray-900 dark:text-white rounded-full">
             {translations[language].contact}
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
             {translations[language].getInTouch}
           </h2>
-          <p className="text-gray-700 dark:text-gray-300 mb-8">
+          <p className="text-gray-800 dark:text-gray-300 mb-8">
             {translations[language].message}
           </p>
           <div className="space-y-4">
             <a
               href="mailto:kubi@aioperator.com"
-              className="inline-block w-full sm:w-auto px-6 py-3 bg-gray-800 dark:bg-white text-white dark:text-navy hover:bg-gray-700 dark:hover:bg-gray-100 transition-colors rounded-lg font-medium"
+              className="inline-block w-full sm:w-auto px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-navy hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors rounded-lg font-medium"
             >
               {translations[language].email}
             </a>
@@ -67,7 +67,9 @@ const Contact = () => {
                 className="w-12 h-12 bg-transparent transition-colors flex items-center justify-center"
               >
                 <img
-                  src="/lovable-uploads/9db8d88f-d8f7-455a-b38c-33f1830b7535.png"
+                  src={theme === 'light' 
+                    ? '/lovable-uploads/32648997-fc8d-4387-b1d4-dff98a6b8bed.png' 
+                    : '/lovable-uploads/05418915-d897-4d1a-ade6-c00d885181fa.png'}
                   alt="LinkedIn"
                   className="w-full h-full object-contain"
                 />
