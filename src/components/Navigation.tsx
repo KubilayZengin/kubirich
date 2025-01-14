@@ -12,7 +12,7 @@ const translations = {
   tr: {
     about: "Hakkımda",
     contact: "İletişim",
-    name: "Kubi Rich"
+    name: "Kubilay Zengin"
   }
 };
 

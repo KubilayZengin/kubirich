@@ -12,7 +12,7 @@ const translations = {
   tr: {
     contact: "İletişim",
     getInTouch: "İletişime Geç",
-    message: "Bir sorunuz olsun veya sadece merhaba demek isteyin, size en kısa sürede dönmeye çalışacağım!",
+    message: "Benimle buradan iletişime geçebilirsiniz.",
     email: "kubi@aioperator.com"
   }
 };
@@ -61,7 +61,7 @@ const Contact = () => {
             <div className="flex justify-center gap-4 mt-6">
               <motion.a
                 whileHover={{ scale: 1.1 }}
-                href="https://www.linkedin.com/in/kubi-rich-03962b242"
+                href="https://www.linkedin.com/in/kubirich"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 bg-transparent transition-colors flex items-center justify-center"
