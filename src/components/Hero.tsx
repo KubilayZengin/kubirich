@@ -11,7 +11,7 @@ const translations = {
   },
   tr: {
     welcome: "Web siteme hoş geldiniz!",
-    greeting: "Merhaba, ben Kubi Rich",
+    greeting: "Merhaba, ben Kubilay Zengin",
     description: "AI Operator'da AI Operasyon Asistanı. İzmir Ekonomi Üniversitesi'nden Mekatronik Mühendisliği B.Sc. ve Bilgisayar Bilimi yan dal mezunu. Yapay zeka, robotik, otomasyon ve yazılım geliştirme konularında tutkulu.",
     contact: "İletişime geç",
     learnMore: "Daha fazla"
