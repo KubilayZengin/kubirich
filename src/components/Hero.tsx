@@ -5,7 +5,7 @@ const translations = {
   en: {
     welcome: "Welcome to my website!",
     greeting: "Hi, I'm Kubi Rich",
-    description: "B.Sc. in Mechatronics Engineering with a Minor in Computer Science from İzmir University of Economics. Passionate about AI, robotics, automation, and software development.",
+    description: "AI Operations Assistant at AI Operator. B.Sc. in Mechatronics Engineering with a Minor in Computer Science from İzmir University of Economics. Passionate about AI, robotics, automation, and software development.",
     contact: "Get in touch",
     learnMore: "Learn more"
   },
