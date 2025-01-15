@@ -33,7 +33,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 bg-white dark:bg-navy-dark">
+    <section className="min-h-screen flex items-center justify-center px-4 bg-white dark:bg-navy-dark" aria-label="Hero section">
       <div className="text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -41,10 +41,10 @@ const Hero = () => {
           transition={{ duration: 0.5 }}
           className="mb-8"
         >
-          <div className="w-48 h-48 mx-auto rounded-full border-4 border-gray-200 dark:border-white/20 overflow-hidden">
+          <div className="w-48 h-48 mx-auto rounded-full border-4 border-gray-200 dark:border-white/20 overflow-hidden profile-image">
             <img
               src="/lovable-uploads/9a41a5f0-6b61-4db6-bd91-086ca7d04e37.png"
-              alt="Profile"
+              alt="Profile picture"
               className="w-full h-full object-cover"
             />
           </div>
@@ -82,12 +82,14 @@ const Hero = () => {
           <a 
             href="#contact" 
             className="inline-block px-6 py-3 bg-gray-800 dark:bg-white text-white dark:text-navy hover:bg-gray-700 dark:hover:bg-gray-100 transition-colors rounded-lg font-medium"
+            aria-label="Contact me"
           >
             {translations[language].contact}
           </a>
           <a 
             href="#about" 
             className="inline-block px-6 py-3 bg-gray-100 dark:bg-white/10 text-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-white/20 transition-colors rounded-lg font-medium"
+            aria-label="Learn more about me"
           >
             {translations[language].learnMore}
           </a>

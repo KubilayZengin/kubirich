@@ -49,7 +49,7 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" className="py-20 px-4 bg-white dark:bg-navy">
+    <section id="about" className="py-20 px-4 bg-white dark:bg-navy" aria-label="About section">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -83,7 +83,8 @@ const About = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-gray-50 dark:bg-white/5 rounded-lg p-4 backdrop-blur-sm"
+            className="bg-gray-50 dark:bg-white/5 rounded-lg p-4 backdrop-blur-sm skill-card"
+            aria-label="AI Operations skill card"
           >
             <img
               src="/lovable-uploads/40bafbbe-617f-46d8-8f3f-5e1154de3c27.png"
@@ -99,7 +100,8 @@ const About = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="bg-gray-50 dark:bg-white/5 rounded-lg p-4 backdrop-blur-sm"
+            className="bg-gray-50 dark:bg-white/5 rounded-lg p-4 backdrop-blur-sm skill-card"
+            aria-label="Automation skill card"
           >
             <img
               src="/lovable-uploads/315b1175-f5c0-49c6-8f26-1b418a50e885.png"
@@ -115,7 +117,8 @@ const About = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="bg-gray-50 dark:bg-white/5 rounded-lg p-4 backdrop-blur-sm"
+            className="bg-gray-50 dark:bg-white/5 rounded-lg p-4 backdrop-blur-sm skill-card"
+            aria-label="Software Development skill card"
           >
             <img
               src="/lovable-uploads/ec174f74-7633-4470-9d89-827a9666240d.png"
