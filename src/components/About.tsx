@@ -5,9 +5,9 @@ const translations = {
   en: {
     aboutMe: "About Me",
     title: "AI Operations Assistant at AI Operator",
-    description1: "Hello! I'm Kubi Rich, an AI Operations Assistant at AI Operator, where we make AI accessible and practical for small and medium-sized businesses. My academic foundation includes a B.Sc. in Mechatronics Engineering from Izmir University of Economics, where I graduated with honors, along with a minor in Computer Science.",
-    description2: "At AI Operator, I'm driven by a passion for using technology to solve real-world problems. My role involves optimizing AI-driven processes, designing automation solutions, and helping businesses embrace AI in a way that feels simple and impactful. From streamlining workflows to developing tailored strategies, I love contributing to innovative projects that empower teams to focus on what truly matters.",
-    description3: "I'm particularly enthusiastic about exploring how artificial intelligence, robotics, and automation can transform operations. If you're curious about how AI can elevate your business, feel free to connect or book a meeting through our website—I'd be happy to help!",
+    description1: "Hi, I'm Kubi Rich, an AI Operations Assistant at AI Operator, where we help small and medium-sized businesses harness the power of AI. With a B.Sc. in Mechatronics Engineering and a minor in Computer Science, I specialize in optimizing AI processes and designing automation solutions.",
+    description2: "Passionate about leveraging AI, robotics, and automation to solve real-world problems, I enjoy creating strategies that empower businesses to thrive. Curious about how AI can elevate your operations? Let's connect or book a meeting through our website!",
+    description3: "",
     skills: {
       aiOps: "AI Operations",
       aiOpsDesc: "Optimizing and managing AI systems",
@@ -20,8 +20,8 @@ const translations = {
   tr: {
     aboutMe: "Hakkımda",
     title: "AI Operator'da AI Operasyon Asistanı",
-    description1: "Merhaba! Ben Kubilay Zengin, şu anda AI Operator'da AI Operasyon Asistanı olarak çalışıyorum. İzmir Ekonomi Üniversitesi'nden Mekatronik Mühendisliği B.Sc. derecemi onur öğrencisi olarak aldım. Ana dalımın yanı sıra, Bilgisayar Bilimi yan dalını tamamladım.",
-    description2: "Yapay zeka, robotik, otomasyon, gömülü sistemler, yazılım geliştirme ve elektrik sistemleri konularında tutkulu biriyim. Mevcut rolümde, AI operasyonlarını optimize etmeye ve otomasyon çözümleri uygulamaya odaklanıyorum.",
+    description1: "Merhaba, ben Kubilay Zengin. AI Operator'da AI Operasyon Asistanı olarak çalışıyorum ve küçük ve orta ölçekli işletmelerin yapay zekanın gücünden faydalanmasına yardımcı oluyorum. Mekatronik Mühendisliği ve Bilgisayar Bilimleri mezunuyum. Yapay zeka süreçlerini optimize etme ve otomasyon çözümleri tasarlama konusunda görev alıyorum.",
+    description2: "Yapay zeka, robotik ve otomasyonun gerçek dünyadaki sorunları nasıl çözebileceğini keşfetmeye merak ile bağlıyım. İşletmenizi geliştirmek için yapay zekayı nasıl kullanabileceğinizi merak ediyorsanız, bağlantı kurabilir veya aioperator.com web sitemizden bir toplantı ayarlayabilirsiniz!",
     description3: "",
     skills: {
       aiOps: "AI Operasyonları",
@@ -33,6 +33,8 @@ const translations = {
     }
   }
 };
+
+// ... keep existing code (useState and useEffect hooks)
 
 const About = () => {
   const [language, setLanguage] = useState<'en' | 'tr'>('en');
