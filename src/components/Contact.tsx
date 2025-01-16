@@ -68,7 +68,7 @@ const Contact = () => {
               >
                 <img
                   src={theme === 'light' 
-                    ? '/lovable-uploads/32648997-fc8d-4387-b1d4-dff98a6b8bed.png' 
+                    ? '/lovable-uploads/fe8e0658-8ff8-4a00-a9c5-fbb51c20be3c.png' 
                     : '/lovable-uploads/05418915-d897-4d1a-ade6-c00d885181fa.png'}
                   alt="LinkedIn"
                   className="w-full h-full object-contain"
