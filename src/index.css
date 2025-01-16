@@ -84,5 +84,10 @@
 
 .skill-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+}
+
+/* Dark mode specific hover effect for skill cards */
+.dark .skill-card:hover {
+  box-shadow: 0 10px 30px -10px rgba(255, 255, 255, 0.1);
 }

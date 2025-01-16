@@ -64,7 +64,7 @@ const Contact = () => {
                 href="https://www.linkedin.com/in/kubirich"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-transparent transition-colors flex items-center justify-center"
+                className="w-16 h-16 bg-transparent transition-colors flex items-center justify-center"
               >
                 <img
                   src={theme === 'light' 
