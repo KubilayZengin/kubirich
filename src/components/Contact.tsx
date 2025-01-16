@@ -64,14 +64,14 @@ const Contact = () => {
                 href="https://www.linkedin.com/in/kubirich"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-20 h-20 bg-transparent transition-colors flex items-center justify-center"
+                className="w-10 h-10 bg-transparent transition-colors flex items-center justify-center"
               >
                 <img
                   src={theme === 'light' 
                     ? '/lovable-uploads/daa32f7a-64db-4cb5-897a-2e719e041451.png' 
                     : '/lovable-uploads/05418915-d897-4d1a-ade6-c00d885181fa.png'}
                   alt="LinkedIn"
-                  className="w-full h-full object-contain scale-125"
+                  className="w-full h-full object-contain"
                 />
               </motion.a>
             </div>
