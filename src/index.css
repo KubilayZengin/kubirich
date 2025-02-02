@@ -91,3 +91,48 @@
 .dark .skill-card:hover {
   box-shadow: 0 10px 30px -10px rgba(255, 255, 255, 0.1);
 }
+
+/* Section spacing */
+section {
+  @apply py-20 scroll-mt-20;
+}
+
+/* Typography improvements */
+h1, h2, h3, h4, h5, h6 {
+  @apply tracking-tight;
+}
+
+/* Language switcher enhancement */
+.language-switcher {
+  @apply relative inline-flex items-center justify-center w-10 h-10 rounded-full 
+         bg-primary/10 hover:bg-primary/20 transition-colors duration-200
+         dark:bg-white/10 dark:hover:bg-white/20;
+}
+
+/* Mobile menu transitions */
+.mobile-menu {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.mobile-menu.open {
+  @apply opacity-100 translate-y-0;
+}
+
+.mobile-menu.closed {
+  @apply opacity-0 -translate-y-2;
+}
+
+/* Contact section call-to-action */
+.cta-button {
+  @apply relative overflow-hidden transition-all duration-300
+         hover:shadow-lg hover:scale-105 active:scale-95;
+}
+
+.cta-button::after {
+  content: '';
+  @apply absolute inset-0 bg-white/20 opacity-0 transition-opacity duration-300;
+}
+
+.cta-button:hover::after {
+  @apply opacity-100;
+}

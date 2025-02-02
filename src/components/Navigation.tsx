@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Globe, Moon, Sun, Menu, X } from "lucide-react";
 import { useTheme } from "next-themes";
 
@@ -49,47 +49,60 @@ const Navigation = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? "bg-background/80 backdrop-blur-md shadow-sm" : ""
       }`}
     >
       <nav className="max-w-6xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <a href="#" className="text-xl font-bold text-primary dark:text-white">
+          <motion.a 
+            href="#" 
+            className="text-xl font-bold text-primary dark:text-white"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
             {translations[language].name}
-          </a>
+          </motion.a>
           
-          {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-gray-900 dark:text-white"
+            className="md:hidden text-gray-900 dark:text-white p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={isMenuOpen ? "close" : "menu"}
+                initial={{ rotate: -90, opacity: 0 }}
+                animate={{ rotate: 0, opacity: 1 }}
+                exit={{ rotate: 90, opacity: 0 }}
+                transition={{ duration: 0.2 }}
+              >
+                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              </motion.div>
+            </AnimatePresence>
           </button>
 
-          {/* Desktop menu */}
           <ul className="hidden md:flex items-center space-x-8">
-            <li>
+            <motion.li whileHover={{ y: -2 }}>
               <a
                 href="#about"
                 className="text-gray-900 dark:text-white hover:text-primary transition-colors"
               >
                 {translations[language].about}
               </a>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
               <button
                 onClick={toggleLanguage}
-                className="p-2 text-gray-900 dark:text-white hover:text-primary transition-colors"
+                className="language-switcher"
                 aria-label="Toggle language"
               >
                 <Globe className="w-5 h-5" />
               </button>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
               <button
                 onClick={toggleTheme}
-                className="p-2 text-gray-900 dark:text-white hover:text-primary transition-colors"
+                className="p-2 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
                 aria-label="Toggle theme"
               >
                 {theme === 'light' ? (
@@ -98,62 +111,82 @@ const Navigation = () => {
                   <Sun className="w-5 h-5" />
                 )}
               </button>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <a
                 href="#contact"
                 className="px-4 py-2 bg-primary text-white dark:text-black rounded-lg hover:bg-primary/90 transition-colors"
               >
                 {translations[language].contact}
               </a>
-            </li>
+            </motion.li>
           </ul>
 
-          {/* Mobile menu */}
-          {isMenuOpen && (
-            <div className="absolute top-full left-0 right-0 bg-white dark:bg-navy shadow-lg md:hidden">
-              <ul className="py-4 px-4 space-y-4">
-                <li>
-                  <a
-                    href="#about"
-                    className="block text-gray-900 dark:text-white hover:text-primary transition-colors"
-                    onClick={() => setIsMenuOpen(false)}
+          <AnimatePresence>
+            {isMenuOpen && (
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.2 }}
+                className="absolute top-full left-0 right-0 bg-white dark:bg-navy shadow-lg md:hidden"
+              >
+                <ul className="py-4 px-4 space-y-4">
+                  <motion.li
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.1 }}
                   >
-                    {translations[language].about}
-                  </a>
-                </li>
-                <li className="flex items-center justify-between">
-                  <button
-                    onClick={toggleLanguage}
-                    className="p-2 text-gray-900 dark:text-white hover:text-primary transition-colors"
-                    aria-label="Toggle language"
+                    <a
+                      href="#about"
+                      className="block text-gray-900 dark:text-white hover:text-primary transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {translations[language].about}
+                    </a>
+                  </motion.li>
+                  <motion.li
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.2 }}
+                    className="flex items-center justify-between"
                   >
-                    <Globe className="w-5 h-5" />
-                  </button>
-                  <button
-                    onClick={toggleTheme}
-                    className="p-2 text-gray-900 dark:text-white hover:text-primary transition-colors"
-                    aria-label="Toggle theme"
+                    <button
+                      onClick={toggleLanguage}
+                      className="language-switcher"
+                      aria-label="Toggle language"
+                    >
+                      <Globe className="w-5 h-5" />
+                    </button>
+                    <button
+                      onClick={toggleTheme}
+                      className="p-2 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+                      aria-label="Toggle theme"
+                    >
+                      {theme === 'light' ? (
+                        <Moon className="w-5 h-5" />
+                      ) : (
+                        <Sun className="w-5 h-5" />
+                      )}
+                    </button>
+                  </motion.li>
+                  <motion.li
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.3 }}
                   >
-                    {theme === 'light' ? (
-                      <Moon className="w-5 h-5" />
-                    ) : (
-                      <Sun className="w-5 h-5" />
-                    )}
-                  </button>
-                </li>
-                <li>
-                  <a
-                    href="#contact"
-                    className="block px-4 py-2 bg-primary text-white dark:text-black rounded-lg hover:bg-primary/90 transition-colors text-center"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {translations[language].contact}
-                  </a>
-                </li>
-              </ul>
-            </div>
-          )}
+                    <a
+                      href="#contact"
+                      className="block px-4 py-2 bg-primary text-white dark:text-black rounded-lg hover:bg-primary/90 transition-colors text-center"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {translations[language].contact}
+                    </a>
+                  </motion.li>
+                </ul>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </nav>
     </motion.header>
