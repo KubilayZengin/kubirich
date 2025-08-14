@@ -2,7 +2,9 @@ import { useEffect } from "react";
 import Navigation from "../components/Navigation";
 import Hero from "../components/Hero";
 import About from "../components/About";
+import Skills from "../components/Skills";
 import Contact from "../components/Contact";
+import ScrollToTop from "../components/ScrollToTop";
 import { motion, useScroll, useSpring } from "framer-motion";
 
 const Index = () => {
@@ -46,8 +48,10 @@ const Index = () => {
       <main>
         <Hero />
         <About />
+        <Skills />
         <Contact />
       </main>
+      <ScrollToTop />
     </div>
   );
 };

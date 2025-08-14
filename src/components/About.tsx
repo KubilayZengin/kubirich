@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 const translations = {
   en: {
     aboutMe: "About Me",
-    title: "AI Operations Assistant at AI Operator",
-    description1: "Hi, I'm Kubi Rich, an AI Operations Assistant at AI Operator, where we help small and medium-sized businesses harness the power of AI. With a B.Sc. in Mechatronics Engineering and a minor in Computer Science, I specialize in optimizing AI processes and designing automation solutions.",
-    description2: "Passionate about leveraging AI, robotics, and automation to solve real-world problems, I enjoy creating strategies that empower businesses to thrive. Curious about how AI can elevate your operations? Let's connect or book a meeting through our website!",
+    title: "AI Operations at AI Operator",
+    description1: "Hi, I'm Kubi Rich, an AI Operations at AI Operator, where we help small and medium-sized businesses make AI work for them. With a B.Sc. in Mechatronics Engineering and a minor in Computer Science, I focus on streamlining AI processes and building automation that actually delivers.",
+    description2: "I work with AI, robotics, and automation to solve real-world problems and create strategies that help businesses grow. Curious how AI could boost your operations? Let's connect or book a meeting through our website.",
     description3: "",
     skills: {
       aiOps: "AI Operations",
@@ -19,9 +19,9 @@ const translations = {
   },
   tr: {
     aboutMe: "Hakkımda",
-    title: "AI Operator'da AI Operasyon Asistanı",
-    description1: "Merhaba, ben Kubilay Zengin. AI Operator'da AI Operasyon Asistanı olarak çalışıyorum ve küçük ve orta ölçekli işletmelerin yapay zekanın gücünden faydalanmasına yardımcı oluyorum. Mekatronik Mühendisliği ve Bilgisayar Bilimleri mezunuyum. Yapay zeka süreçlerini optimize etme ve otomasyon çözümleri tasarlama konusunda görev alıyorum.",
-    description2: "Yapay zeka, robotik ve otomasyonun gerçek dünyadaki sorunları nasıl çözebileceğini keşfetmeye merak ile bağlıyım. İşletmenizi geliştirmek için yapay zekayı nasıl kullanabileceğinizi merak ediyorsanız, bağlantı kurabilir veya aioperator.com web sitemizden bir toplantı ayarlayabilirsiniz!",
+    title: "AI Operator'da AI Operasyonları",
+    description1: "Merhaba, ben Kubilay Zengin. AI Operator'da AI Operasyonları olarak çalışıyorum ve küçük ve orta ölçekli işletmelerin yapay zekayı kendileri için çalıştırmasına yardımcı oluyorum. Mekatronik Mühendisliği (B.Sc.) ve Bilgisayar Bilimleri yan dal mezunuyum. AI süreçlerini düzenleme ve gerçekten sonuç veren otomasyonlar kurma konusunda odaklanıyorum.",
+    description2: "Gerçek dünya problemlerini çözmek için AI, robotik ve otomasyon ile çalışıyorum ve işletmelerin büyümesine yardımcı olan stratejiler oluşturuyorum. AI'ın operasyonlarınızı nasıl artırabileceğini merak ediyorsanız, bağlantı kuralım veya web sitemizden bir toplantı ayarlayın.",
     description3: "",
     skills: {
       aiOps: "AI Operasyonları",

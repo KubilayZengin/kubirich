@@ -5,14 +5,14 @@ const translations = {
   en: {
     welcome: "Welcome to my website!",
     greeting: "Hi, I'm Kubi Rich",
-    description: "AI Operations Assistant at AI Operator. B.Sc. in Mechatronics Engineering with a Minor in Computer Science from İzmir University of Economics. Passionate about AI, robotics, automation, and software development.",
+    description: "AI Operations at AI Operator. Mechatronics Engineer (B.Sc.) with a Minor in Computer Science from İzmir University of Economics. Focused on AI, robotics, automation, and creating practical software solutions.",
     contact: "Get in touch",
     learnMore: "Learn more"
   },
   tr: {
     welcome: "Web siteme hoş geldiniz!",
     greeting: "Merhaba, ben Kubilay Zengin",
-    description: "AI Operator'da AI Operasyon Asistanı. İzmir Ekonomi Üniversitesi'nden Mekatronik Mühendisliği B.Sc. ve Bilgisayar Bilimi yan dal mezunu. Yapay zeka, robotik, otomasyon ve yazılım geliştirme konularında tutkulu.",
+    description: "AI Operator'da AI Operasyonları. İzmir Ekonomi Üniversitesi'nden Mekatronik Mühendisliği (B.Sc.) ve Bilgisayar Bilimleri yan dal mezunu. AI, robotik, otomasyon ve pratik yazılım çözümleri oluşturma konularında odaklanmış.",
     contact: "İletişime geç",
     learnMore: "Daha fazla"
   }
@@ -43,7 +43,7 @@ const Hero = () => {
         >
           <div className="w-48 h-48 mx-auto rounded-full border-4 border-gray-200 dark:border-white/20 overflow-hidden profile-image">
             <img
-              src="/lovable-uploads/9a41a5f0-6b61-4db6-bd91-086ca7d04e37.png"
+              src="/lovable-uploads/094a9a30-8edf-4d70-acfb-45ae31ffe18d.png"
               alt="Profile picture"
               className="w-full h-full object-cover"
             />

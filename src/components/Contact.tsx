@@ -92,6 +92,20 @@ const Contact = () => {
                   className="w-full h-full object-contain p-3"
                 />
               </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                href="https://github.com/kubirich"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-16 h-16 bg-transparent transition-colors flex items-center justify-center hover:bg-gray-200 dark:hover:bg-white/10 rounded-full"
+              >
+                <img
+                  src="/github-logo.png"
+                  alt="GitHub"
+                  className="w-full h-full object-contain p-3"
+                />
+              </motion.a>
             </div>
           </div>
         </motion.div>
