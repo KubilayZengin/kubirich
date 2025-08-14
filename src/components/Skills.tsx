@@ -7,8 +7,9 @@ const translations = {
     technologies: "Technologies & Tools",
     techItems: [
       "Python", "JavaScript", "TypeScript", "React", "Node.js", 
-      "MongoDB", "PostgreSQL", "Docker", "AWS", "Git", 
-      "TensorFlow", "OpenAI API", "Automation Tools", "REST APIs"
+      "PostgreSQL", "Git", "OpenAI API", "REST APIs", "n8n", 
+      "Make.com", "Zapier", "MindStudio", "Framer", "Vector DB", 
+      "Lovable", "Supabase"
     ]
   },
   tr: {
@@ -16,8 +17,9 @@ const translations = {
     technologies: "Teknolojiler ve Araçlar",
     techItems: [
       "Python", "JavaScript", "TypeScript", "React", "Node.js", 
-      "MongoDB", "PostgreSQL", "Docker", "AWS", "Git", 
-      "TensorFlow", "OpenAI API", "Otomasyon Araçları", "REST APIs"
+      "PostgreSQL", "Git", "OpenAI API", "REST APIs", "n8n", 
+      "Make.com", "Zapier", "MindStudio", "Framer", "Vector DB", 
+      "Lovable", "Supabase"
     ]
   }
 };
