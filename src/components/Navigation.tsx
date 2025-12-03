@@ -6,11 +6,13 @@ import { useTheme } from "next-themes";
 const translations = {
   en: {
     about: "About",
+    skills: "Skills",
     contact: "Contact",
     name: "Kubi Rich"
   },
   tr: {
     about: "Hakkımda",
+    skills: "Yetenekler",
     contact: "İletişim",
     name: "Kubilay Zengin"
   }
@@ -50,14 +52,14 @@ const Navigation = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/80 backdrop-blur-md shadow-sm" : ""
+        isScrolled ? "bg-background/90 backdrop-blur-md border-b border-border" : ""
       }`}
     >
       <nav className="max-w-6xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <motion.a 
             href="#" 
-            className="text-xl font-bold text-primary dark:text-white"
+            className="text-xl font-bold text-foreground"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -66,7 +68,7 @@ const Navigation = () => {
           
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-gray-900 dark:text-white p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+            className="md:hidden text-foreground p-2 hover:bg-secondary rounded-lg transition-colors"
           >
             <AnimatePresence mode="wait">
               <motion.div
@@ -81,19 +83,27 @@ const Navigation = () => {
             </AnimatePresence>
           </button>
 
-          <ul className="hidden md:flex items-center space-x-8">
+          <ul className="hidden md:flex items-center space-x-6">
             <motion.li whileHover={{ y: -2 }}>
               <a
                 href="#about"
-                className="text-gray-900 dark:text-white hover:text-primary transition-colors"
+                className="text-muted-foreground hover:text-foreground transition-colors"
               >
                 {translations[language].about}
+              </a>
+            </motion.li>
+            <motion.li whileHover={{ y: -2 }}>
+              <a
+                href="#skills"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {translations[language].skills}
               </a>
             </motion.li>
             <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
               <button
                 onClick={toggleLanguage}
-                className="language-switcher"
+                className="language-switcher text-foreground"
                 aria-label="Toggle language"
               >
                 <Globe className="w-5 h-5" />
@@ -102,7 +112,7 @@ const Navigation = () => {
             <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
               <button
                 onClick={toggleTheme}
-                className="p-2 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+                className="p-2 text-foreground hover:bg-secondary rounded-lg transition-colors"
                 aria-label="Toggle theme"
               >
                 {theme === 'light' ? (
@@ -115,7 +125,7 @@ const Navigation = () => {
             <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <a
                 href="#contact"
-                className="px-4 py-2 bg-primary text-white dark:text-black rounded-lg hover:bg-primary/90 transition-colors"
+                className="px-5 py-2.5 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium"
               >
                 {translations[language].contact}
               </a>
@@ -129,7 +139,7 @@ const Navigation = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.2 }}
-                className="absolute top-full left-0 right-0 bg-white dark:bg-navy shadow-lg md:hidden"
+                className="absolute top-full left-0 right-0 bg-card border-b border-border md:hidden"
               >
                 <ul className="py-4 px-4 space-y-4">
                   <motion.li
@@ -139,10 +149,23 @@ const Navigation = () => {
                   >
                     <a
                       href="#about"
-                      className="block text-gray-900 dark:text-white hover:text-primary transition-colors"
+                      className="block text-foreground hover:text-primary transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {translations[language].about}
+                    </a>
+                  </motion.li>
+                  <motion.li
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.15 }}
+                  >
+                    <a
+                      href="#skills"
+                      className="block text-foreground hover:text-primary transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {translations[language].skills}
                     </a>
                   </motion.li>
                   <motion.li
@@ -153,14 +176,14 @@ const Navigation = () => {
                   >
                     <button
                       onClick={toggleLanguage}
-                      className="language-switcher"
+                      className="language-switcher text-foreground"
                       aria-label="Toggle language"
                     >
                       <Globe className="w-5 h-5" />
                     </button>
                     <button
                       onClick={toggleTheme}
-                      className="p-2 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+                      className="p-2 text-foreground hover:bg-secondary rounded-lg transition-colors"
                       aria-label="Toggle theme"
                     >
                       {theme === 'light' ? (
@@ -173,11 +196,11 @@ const Navigation = () => {
                   <motion.li
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.3 }}
+                    transition={{ delay: 0.25 }}
                   >
                     <a
                       href="#contact"
-                      className="block px-4 py-2 bg-primary text-white dark:text-black rounded-lg hover:bg-primary/90 transition-colors text-center"
+                      className="block px-4 py-2.5 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-center font-medium"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {translations[language].contact}

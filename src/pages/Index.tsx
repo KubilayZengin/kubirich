@@ -4,8 +4,10 @@ import Hero from "../components/Hero";
 import About from "../components/About";
 import Skills from "../components/Skills";
 import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
 import { motion, useScroll, useSpring } from "framer-motion";
+import { Helmet } from "react-helmet";
 
 const Index = () => {
   const { scrollYProgress } = useScroll();
@@ -39,20 +41,30 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="relative">
-      <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-primary origin-left z-50"
-        style={{ scaleX }}
-      />
-      <Navigation />
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Contact />
-      </main>
-      <ScrollToTop />
-    </div>
+    <>
+      <Helmet>
+        <title>Kubi Rich - AI Operations & Automation Expert</title>
+        <meta name="description" content="Kubi Rich - AI Operations at AI Operator. Mechatronics Engineer focused on AI, robotics, automation, and creating practical software solutions." />
+        <meta name="keywords" content="AI Operations, Automation, Mechatronics, AI Operator, Kubi Rich" />
+        <link rel="canonical" href="https://kubirich.com" />
+      </Helmet>
+      
+      <div className="relative">
+        <motion.div
+          className="fixed top-0 left-0 right-0 h-1 bg-primary origin-left z-50"
+          style={{ scaleX }}
+        />
+        <Navigation />
+        <main>
+          <Hero />
+          <About />
+          <Skills />
+          <Contact />
+        </main>
+        <Footer />
+        <ScrollToTop />
+      </div>
+    </>
   );
 };
 

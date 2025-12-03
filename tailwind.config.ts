@@ -35,10 +35,10 @@ export default {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
         },
-        navy: {
-          DEFAULT: "#0F172A",
-          light: "#1E293B",
-          dark: "#0A1120",
+        forest: {
+          DEFAULT: "hsl(142 84% 17%)",
+          light: "hsl(142 60% 25%)",
+          dark: "hsl(142 40% 6%)",
         },
       },
       keyframes: {
