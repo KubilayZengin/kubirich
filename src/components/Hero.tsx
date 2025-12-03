@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
+import { ArrowDown } from "lucide-react";
 
 const translations = {
   en: {
@@ -20,6 +22,7 @@ const translations = {
 
 const Hero = () => {
   const [language, setLanguage] = useState<'en' | 'tr'>('en');
+  const { theme } = useTheme();
 
   useEffect(() => {
     const handleLanguageChange = (event: CustomEvent) => {
@@ -33,68 +36,88 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 bg-white dark:bg-navy-dark" aria-label="Hero section">
-      <div className="text-center">
+    <section className="min-h-screen flex items-center justify-center px-4 bg-background relative" aria-label="Hero section">
+      <div className="text-center max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="mb-8"
         >
-          <div className="w-48 h-48 mx-auto rounded-full border-4 border-gray-200 dark:border-white/20 overflow-hidden profile-image">
+          <div className="w-40 h-40 md:w-48 md:h-48 mx-auto rounded-full border-4 border-primary/30 overflow-hidden profile-image shadow-xl">
             <img
-              src="/lovable-uploads/094a9a30-8edf-4d70-acfb-45ae31ffe18d.png"
-              alt="Profile picture"
+              src="/lovable-uploads/profile-photo.png"
+              alt="Kubi Rich - AI Operations"
               className="w-full h-full object-cover"
             />
           </div>
         </motion.div>
+        
         <motion.span 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-block px-3 py-1 mb-6 text-sm bg-gray-100 dark:bg-white/10 text-gray-800 dark:text-white rounded-full"
+          className="inline-block px-4 py-1.5 mb-6 text-sm bg-primary/10 text-primary font-medium rounded-full"
         >
           {translations[language].welcome}
         </motion.span>
+        
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-4xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white"
+          className="text-4xl md:text-6xl font-bold mb-6 text-foreground"
         >
           {translations[language].greeting}
         </motion.h1>
+        
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8 text-lg"
+          className="text-muted-foreground max-w-2xl mx-auto mb-10 text-lg leading-relaxed"
         >
           {translations[language].description}
         </motion.p>
+        
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
-          className="space-x-4"
+          className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           <a 
             href="#contact" 
-            className="inline-block px-6 py-3 bg-gray-800 dark:bg-white text-white dark:text-navy hover:bg-gray-700 dark:hover:bg-gray-100 transition-colors rounded-lg font-medium"
+            className="inline-flex items-center justify-center px-8 py-3 bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 rounded-lg font-medium shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30"
             aria-label="Contact me"
           >
             {translations[language].contact}
           </a>
           <a 
             href="#about" 
-            className="inline-block px-6 py-3 bg-gray-100 dark:bg-white/10 text-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-white/20 transition-colors rounded-lg font-medium"
+            className="inline-flex items-center justify-center px-8 py-3 bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-colors rounded-lg font-medium border border-border"
             aria-label="Learn more about me"
           >
             {translations[language].learnMore}
           </a>
         </motion.div>
       </div>
+      
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1, duration: 0.5 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+      >
+        <motion.a
+          href="#about"
+          animate={{ y: [0, 8, 0] }}
+          transition={{ repeat: Infinity, duration: 2 }}
+          className="text-muted-foreground hover:text-primary transition-colors"
+        >
+          <ArrowDown size={24} />
+        </motion.a>
+      </motion.div>
     </section>
   );
 };
