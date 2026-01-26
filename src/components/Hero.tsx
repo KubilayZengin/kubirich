@@ -6,14 +6,14 @@ const translations = {
   en: {
     welcome: "Welcome to my website!",
     greeting: "Hi, I'm Kubi Rich",
-    description: "AI Operations at AI Operator. Mechatronics Engineer (B.Sc.) with a Minor in Computer Science from İzmir University of Economics. Focused on AI, robotics, automation, and creating practical software solutions.",
+    description: "AI Operations Lead at AI Operator. Mechatronics Engineer (B.Sc.) with a Minor in Computer Science from İzmir University of Economics. Focused on AI, robotics, automation, and creating practical software solutions.",
     contact: "Get in touch",
     learnMore: "Learn more"
   },
   tr: {
     welcome: "Web siteme hoş geldiniz!",
     greeting: "Merhaba, ben Kubilay Zengin",
-    description: "AI Operator'da AI Operasyonları. İzmir Ekonomi Üniversitesi'nden Mekatronik Mühendisliği (B.Sc.) ve Bilgisayar Bilimleri yan dal mezunu. AI, robotik, otomasyon ve pratik yazılım çözümleri oluşturma konularında odaklanmış.",
+    description: "AI Operator'da AI Operasyon Lideri. İzmir Ekonomi Üniversitesi'nden Mekatronik Mühendisliği (B.Sc.) ve Bilgisayar Bilimleri yan dal mezunu. AI, robotik, otomasyon ve pratik yazılım çözümleri oluşturma konularında odaklanmış.",
     contact: "İletişime geç",
     learnMore: "Daha fazla"
   }

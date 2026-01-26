@@ -56,9 +56,9 @@ const Footer = () => {
               className="hover:opacity-80 transition-opacity"
             >
               <img
-                src={theme === 'dark' ? '/aio-logo-light.svg' : '/aio-logo-dark.svg'}
+                src={theme === 'dark' ? '/aio-logo-horizontal-light.png' : '/aio-logo-horizontal-dark.png'}
                 alt="AI Operator"
-                className="h-8 w-auto"
+                className="h-6 w-auto"
               />
             </a>
           </motion.div>

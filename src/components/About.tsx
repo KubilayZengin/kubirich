@@ -6,14 +6,14 @@ import { ExternalLink } from "lucide-react";
 const translations = {
   en: {
     aboutMe: "About Me",
-    title: "AI Operations at AI Operator",
+    title: "AI Operations Lead at AI Operator",
     description1: "Hi, I'm Kubi Rich, an AI Operations at AI Operator, where we help small and medium-sized businesses make AI work for them. With a B.Sc. in Mechatronics Engineering and a minor in Computer Science, I focus on streamlining AI processes and building automation that actually delivers.",
     description2: "I work with AI, robotics, and automation to solve real-world problems and create strategies that help businesses grow. Curious how AI could boost your operations? Let's connect or book a meeting through our website.",
     visitWebsite: "Visit AI Operator"
   },
   tr: {
     aboutMe: "Hakkımda",
-    title: "AI Operator'da AI Operasyonları",
+    title: "AI Operator'da AI Operasyon Lideri",
     description1: "Merhaba, ben Kubilay Zengin. AI Operator'da AI Operasyonları olarak çalışıyorum ve küçük ve orta ölçekli işletmelerin yapay zekayı kendileri için çalıştırmasına yardımcı oluyorum. Mekatronik Mühendisliği (B.Sc.) ve Bilgisayar Bilimleri yan dal mezunuyum. AI süreçlerini düzenleme ve gerçekten sonuç veren otomasyonlar kurma konusunda odaklanıyorum.",
     description2: "Gerçek dünya problemlerini çözmek için AI, robotik ve otomasyon ile çalışıyorum ve işletmelerin büyümesine yardımcı olan stratejiler oluşturuyorum. AI'ın operasyonlarınızı nasıl artırabileceğini merak ediyorsanız, bağlantı kuralım veya web sitemizden bir toplantı ayarlayın.",
     visitWebsite: "AI Operator'ı Ziyaret Et"
@@ -64,9 +64,9 @@ const About = () => {
             className="inline-block my-6"
           >
             <img
-              src={theme === 'dark' ? '/aio-logo-light.svg' : '/aio-logo-dark.svg'}
+              src={theme === 'dark' ? '/aio-logo-horizontal-light.png' : '/aio-logo-horizontal-dark.png'}
               alt="AI Operator"
-              className="h-16 md:h-20 w-auto mx-auto"
+              className="h-12 md:h-16 w-auto mx-auto"
             />
           </motion.a>
           
