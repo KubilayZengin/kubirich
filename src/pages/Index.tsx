@@ -43,8 +43,8 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Kubi Rich - AI Operations & Automation Expert</title>
-        <meta name="description" content="Kubi Rich - AI Operations at AI Operator. Mechatronics Engineer focused on AI, robotics, automation, and creating practical software solutions." />
+        <title>Kubi Rich - AI Operations Lead & Automation Expert</title>
+        <meta name="description" content="Kubi Rich - AI Operations Lead at AI Operator. Mechatronics Engineer focused on AI, robotics, automation, and creating practical software solutions." />
         <meta name="keywords" content="AI Operations, Automation, Mechatronics, AI Operator, Kubi Rich" />
         <link rel="canonical" href="https://kubirich.com" />
       </Helmet>
