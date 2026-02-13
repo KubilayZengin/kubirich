@@ -36,7 +36,7 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" className="py-24 px-4 bg-muted" aria-label="About section">
+    <section id="about" className="py-24 px-4 bg-muted border-t border-border" aria-label="About section">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
